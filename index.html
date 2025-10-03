@@ -1,121 +1,71 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RECO MOTORS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #111;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #222;
-        }
-        nav a {
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #444;
-        }
-        section {
-            padding: 50px;
-            text-align: center;
-        }
-        h2 {
-            margin-bottom: 20px;
-        }
-        .cars {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .car {
-            background-color: white;
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .car img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #111;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-            border-radius: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RECO MOTORS - Ana Sayfa</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Roboto', sans-serif; background-color:#f5f5f5; color:#333; }
+nav { display:flex; justify-content:center; background-color:#111; }
+nav a { color:white; padding:15px 30px; text-decoration:none; font-weight:bold; transition:0.3s; }
+nav a:hover { background-color:#ff4e50; }
+header { position: relative; overflow:hidden; }
+.slider { position: relative; height:500px; overflow:hidden; }
+.slides { display:flex; width:400%; animation: slide 16s infinite; }
+.slides img { width:100%; height:500px; object-fit:cover; }
+@keyframes slide {0%,20%{transform:translateX(0%);}25%,45%{transform:translateX(-100%);}50%,70%{transform:translateX(-200%);}75%,95%{transform:translateX(-300%);}100%{transform:translateX(0%);}}
+.caption { position:absolute; bottom:50px; left:50px; color:white; text-shadow:0 4px 10px rgba(0,0,0,0.5); animation:fadeIn 2s ease-in-out; }
+.caption h2 { font-size:2.5em; margin-bottom:10px; }
+.caption p { font-size:1.5em; font-weight:bold; }
+@keyframes fadeIn {from{opacity:0}to{opacity:1}}
+section { padding:60px 20px; text-align:center; }
+h2 { font-size:2.5em; margin-bottom:30px; color:#ff4e50; }
+footer { background:#111; color:white; text-align:center; padding:20px; font-size:0.9em; }
+@media(max-width:768px){.slider{height:300px;}.slides img{height:300px;}.caption h2{font-size:1.8em;}.caption p{font-size:1.2em;}}
+</style>
 </head>
 <body>
-    <header>
-        <h1>RECO MOTORS</h1>
-    </header>
 
-    <nav>
-        <a href="#home">Ana Sayfa</a>
-        <a href="#cars">Arabalarımız</a>
-        <a href="#contact">İletişim & Konum</a>
-    </nav>
+<nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="arabalar.html">Arabalarımız</a>
+    <a href="iletisim.html">İletişim</a>
+</nav>
 
-    <section id="home">
-        <h2>Hoş Geldiniz!</h2>
-        <p>RECO MOTORS ile hayalinizdeki araca ulaşın.</p>
-    </section>
-
-    <section id="cars">
-        <h2>Arabalarımız</h2>
-        <div class="cars">
-            <div class="car">
-                <img src="https://via.placeholder.com/250x150.png?text=Araba+1" alt="Araba 1">
-                <h3>Araba Model 1</h3>
-                <p>Fiyat: 500.000₺</p>
-            </div>
-            <div class="car">
-                <img src="https://via.placeholder.com/250x150.png?text=Araba+2" alt="Araba 2">
-                <h3>Araba Model 2</h3>
-                <p>Fiyat: 750.000₺</p>
-            </div>
-            <div class="car">
-                <img src="https://via.placeholder.com/250x150.png?text=Araba+3" alt="Araba 3">
-                <h3>Araba Model 3</h3>
-                <p>Fiyat: 1.000.000₺</p>
-            </div>
+<header>
+    <div class="slider">
+        <div class="slides">
+            <img src="https://images.unsplash.com/photo-1615191596660-9c2c9f164f91?auto=format&fit=crop&w=1600&q=80" alt="BMW i8">
+            <img src="https://images.unsplash.com/photo-1615397779934-7f12c0d5f6de?auto=format&fit=crop&w=1600&q=80" alt="Audi R8">
+            <img src="https://images.unsplash.com/photo-1571607386254-702f0c556e86?auto=format&fit=crop&w=1600&q=80" alt="Mercedes AMG GT">
+            <img src="https://images.unsplash.com/photo-1584534855997-1b1a1c9c8d0b?auto=format&fit=crop&w=1600&q=80" alt="Porsche 911">
         </div>
-    </section>
+        <div class="caption">
+            <h2 id="slide-title">BMW i8</h2>
+            <p id="slide-price">2.500.000₺</p>
+        </div>
+    </div>
+</header>
 
-    <section id="contact">
-        <h2>İletişim & Konum</h2>
-        <p>Email: info@recomotors.com</p>
-        <p>Telefon: +90 555 123 45 67</p>
-        <h3>Konum</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.7596482347136!2d28.97835941522497!3d41.00823887930319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabf9e0ee19bbd%3A0x6b1e7d4e6f3d0c5a!2zU3RhdGVsYW0gQ2l0eSwgUXVlbiBUYW1lc20!5e0!3m2!1str!2str!4v1698772265117!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+<section>
+    <h2>Hoş Geldiniz!</h2>
+    <p>RECO MOTORS olarak hayalinizdeki arabaya ulaşmanın en hızlı yolu!</p>
+</section>
 
-    <footer>
-        <p>© 2025 RECO MOTORS</p>
-    </footer>
+<footer>
+    <p>© 2025 RECO MOTORS</p>
+</footer>
+
+<script>
+const titles = ["BMW i8","Audi R8","Mercedes AMG GT","Porsche 911"];
+const prices = ["2.500.000₺","3.000.000₺","3.500.000₺","4.000.000₺"];
+let index = 0;
+const titleElem = document.getElementById("slide-title");
+const priceElem = document.getElementById("slide-price");
+setInterval(() => { index=(index+1)%titles.length; titleElem.textContent=titles[index]; priceElem.textContent=prices[index]; },4000);
+</script>
+
 </body>
 </html>
